@@ -1,6 +1,6 @@
 export const Logo = () => {
   return (
-    <a href="" className="flex items-center gap-3 font-semibold">
+    <a href="/" className="flex items-center gap-3 font-semibold transition-all">
       <svg
         width="24"
         height="28"

@@ -1,7 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
+/* React Select Component - Dark Mode */
+.dark .rs__control {
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+  border: none !important;
+  caret-color: white !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark .rs__control:hover {
+  background-color: #374151 !important;
+}
+
+.dark .rs__control--is-focused {
+  background-color: #374151 !important;
+}
+
+.dark .rs__menu {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+}
+
+.dark .rs__menu-list {
+  background-color: #111827 !important;
+}
+
+.dark .rs__option {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+  cursor: pointer;
+}
+
+.dark .rs__option--is-focused {
+  background-color: #374151 !important;
+  color: #f3f4f6 !important;
+}
+
+.dark .rs__option--is-selected {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.dark .rs__placeholder {
+  color: #6b7280 !important;
+}
+
+.dark .rs__single-value {
+  color: #f3f4f6 !important;
+}
+
+.dark .rs__input {
+  color: #f3f4f6 !important;
+}
+
+.dark .rs__indicator {
+  color: #6b7280 !important;
+}
+
+.dark .rs__indicator:hover {
+  color: #f3f4f6 !important;
 }

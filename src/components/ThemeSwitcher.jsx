@@ -2,7 +2,7 @@ import { Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const activeState =
-  "flex items-center justify-center w-5 h-5 rounded-full cursor-pointer";
+  "flex items-center justify-center w-5 h-5 rounded-full cursor-pointer transition-all";
 
 export const ThemeSwitcher = () => {
   const [theme, setTheme] = useState(() => {
