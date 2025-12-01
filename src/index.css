@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+* {
+  box-sizing: border-box;
+}
+
 /* React Select Component - Dark Mode */
 .dark .rs__control {
   background-color: #1f2937 !important;
