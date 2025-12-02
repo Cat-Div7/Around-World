@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export const CountryCard = ({ name, population, region, capital, flag }) => {
   return (
-    <a href="#">
+    <Link to={name}>
       <div className="h-full rounded-lg bg-gray-50 p-3 pb-9 shadow-md transition-all dark:bg-gray-800">
         <div className="mb-4 aspect-4/3 w-full overflow-hidden rounded-lg">
           <img
@@ -14,7 +16,9 @@ export const CountryCard = ({ name, population, region, capital, flag }) => {
         <div className="ml-3 flex flex-col gap-2">
           <p>
             <span className="font-semibold">Population: </span>
-            <span className="font-light">{population}</span>
+            <span className="font-light">
+              {parseInt(population).toLocaleString()}
+            </span>
           </p>
           <p>
             <span className="font-semibold">Region: </span>
@@ -26,6 +30,6 @@ export const CountryCard = ({ name, population, region, capital, flag }) => {
           </p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
