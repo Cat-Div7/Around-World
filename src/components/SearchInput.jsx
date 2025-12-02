@@ -1,8 +1,24 @@
 import { Search } from "lucide-react";
 
-export const SearchInput = () => {
+export const SearchInput = ({ countries, filterCountries }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const searchTerm = e.target.elements.search.value;
+    const filtered =
+      !searchTerm || searchTerm === ""
+        ? countries
+        : countries.filter((country) =>
+            country.name.official
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase()),
+          );
+
+    filterCountries(filtered);
+  };
+
   return (
-    <form className="relative min-w-auto md:min-w-md">
+    <form className="relative min-w-auto md:min-w-md" onSubmit={handleSubmit}>
       <div className="absolute top-3 left-8 text-[#848484] md:top-4">
         <Search />
       </div>
